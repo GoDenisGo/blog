@@ -1,3 +1,18 @@
 * {
     margin: 0;
+    font-family: Calibri, serif;
+}
+
+body {
+    margin: 1rem;
+    background: lightblue;
+}
+
+.topBar {
+    text-align: center;
+    position: sticky;
+}
+
+p {
+    text-align: center;
 }
