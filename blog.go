@@ -33,7 +33,7 @@ func pageElement(src []byte, elem string) string {
 	return m[1]
 }
 
-// loadPage returns the Page data for each resource.
+// loadHome returns the Page data for each resource.
 func loadHome(title string) (*Page, error) {
 	filepath := "./pages/" + title + ".txt"
 	contents, err := os.ReadFile(filepath)
