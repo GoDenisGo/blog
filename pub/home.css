@@ -4,13 +4,14 @@
 }
 
 body {
-    margin: 1rem;
-    background: lightblue;
+    background: linear-gradient(lightblue 50%, white);
+    background-size: cover;
+    min-height: 100vh;
+    margin-bottom: 2vh;
 }
 
-.topBar {
+.welcome {
     text-align: center;
-    position: sticky;
 }
 
 p {

@@ -1,0 +1,13 @@
+{
+  "devDependencies": {
+    "eslint": "^8.47.0",
+    "eslint-config-portsoc": "^1.0.1"
+  },
+  "eslintConfig": {
+    "extends": "portsoc",
+    "root": true,
+    "env": {
+      "browser": true
+    }
+  }
+}

@@ -1,3 +1,22 @@
-This is my home blog. It is currently under construction.
+[[Title]]Denis' Blog[[Title]]
+
+[[Heading]]Welcome to my internet home...[[Heading]]
+
+[[Body]]This is my home blog. It is currently under construction.
 
 I plan to use this blog to show off a bit more about who I am and what I'm interested in.
+
+Since I have a summer job, development might be slow until I begin University again.
+
+Although, I will definitely try to keep up with my projects.
+
+Since I need sample text, I guess I will talk about random things. Don't expect anything interesting.
+
+I like the Discworld series by Terry Pratchett. Reading those novels was the first time I ever laughed at a book.
+The fast pace of each plot keeps the books fresh and exiting. The focus for me is the language and literary
+devices. The use of polysemy throughout each novel enables the audience to visualize the mythical world in ways that are
+unorthodox. This opens up different passages for the story to take, which makes the Discworld series more unique. In
+this way, I believe that reading has strengthened my mind from the point of view that you need to understand core
+messages without losing sight of the general direction of text.
+<script>console.log("hello!")</script>
+[[Body]]
