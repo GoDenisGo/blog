@@ -2,7 +2,7 @@
 
 [[Heading]]Welcome to my internet home...[[Heading]]
 
-[[Body]]This is my home blog. It is currently under construction.
+[[Body]]This is filler text for future development.
 
 I plan to use this blog to show off a bit more about who I am and what I'm interested in.
 
