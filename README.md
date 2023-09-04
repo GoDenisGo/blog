@@ -4,15 +4,20 @@ Repo for my personal blog.
 My blog is where I will a profile about myself, including who I am and my interests. Currently being developed in my free time.
 
 ## How to install and run
-This section will be updated once I have tested the same process myself. For now, I am focusing on getting the important
-bits to actually run.
+This server is built on a Windows 11 machine.
 
 You will need:
 - Latest version of Golang. You will use Go tooling to compile a working executable.
 - Latest version of Node (JavaScript + Node Package Manager). This is important if you want the correct environment for
 getting scripts to run.
 
-This server is built on a Windows 11 machine.
+1. git clone "github.com/GoDenisGo/blog" into a directory of your choice.
+2. Open a terminal and change directory into the root of the project.
+3. Run "go build blog.go" (this will turn the Go server into an executable).
+4. Run "./blog" (this will start the server) switch to a web browser.
+5. Enter "http://localhost:8080/" into the URL bar. The website should now be loaded.
+
+If there are any errors, please notify me through GitHub issues or via email.
 
 ## Rationale (why do I need a blog? Who is it for?)
 I want this blog to be seen as a creative personal project. I want to use it as a chance to stretch my skills and try
