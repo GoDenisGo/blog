@@ -1,36 +1,30 @@
 package main
 
 import (
+	"embed"
+	"io/fs"
 	"log"
 	"net/http"
 )
 
-func homeHandler(w http.ResponseWriter, r *http.Request) {
-	http.ServeFile(w, r, "./pub/home.html")
-}
-
-func cvHandler(w http.ResponseWriter, r *http.Request) {
-	http.ServeFile(w, r, "./pub/cv.html")
-}
-
-func blogHandler(w http.ResponseWriter, r *http.Request) {
-	http.ServeFile(w, r, "./pub/blog.html")
-}
+//go:embed pub
+var content embed.FS
 
 func main() {
 	log.Println("Server listening at http://localhost:8080/")
 
-	webpages := http.FileServer(http.Dir("./pub/"))
-	http.Handle("/pub/", http.StripPrefix("/pub/", webpages))
+	pubFS, err := fs.Sub(content, "pub")
+	if err != nil {
+		log.Fatal(err)
+	}
 
-	// /home is intended as the starting point of the web app.
+	// We need to strip /pub/ because the pubFS already responds to URIs containing /pub/<path>.
+	// In effect, we are trimming up the URL /pub/pub/<path> which comes from the request sent by the client.
+	http.Handle("/pub/", http.StripPrefix("/pub/", http.FileServer(http.FS(pubFS))))
+
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		http.Redirect(w, r, "/home", http.StatusFound)
+		http.Redirect(w, r, "./pub/home/", http.StatusFound)
 	})
-
-	http.HandleFunc("/home", homeHandler)
-	http.HandleFunc("/cv", cvHandler)
-	http.HandleFunc("/blog", blogHandler)
 
 	log.Fatal(http.ListenAndServe(":8080", nil))
 }
